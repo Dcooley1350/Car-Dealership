@@ -85,10 +85,18 @@ public class Program
       }
     }
 
-    foreach(Car automobile in CarsMatchingSearch)
+    if (CarsMatchingSearch.Count == 0)
     {
-      Console.WriteLine(automobile.MakeModel);
-      Console.WriteLine(automobile.Description);
+        Console.WriteLine("You need mo scrilla");
     }
+    else
+    {
+        foreach (Car automobile in CarsMatchingSearch)
+        {
+            Console.WriteLine(automobile.MakeModel);
+            Console.WriteLine(automobile.Description);
+        }
+    }
+
   }
 }
